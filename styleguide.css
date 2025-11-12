@@ -4,17 +4,132 @@
 
 @layer styleguide {
 
-    /* Schrijf hier de verschillende stijlen, die
-       gedeeld gaan worden door jullie projecten */
+@font-face {
+    font-family: "Cinzel";
+    src: url("../assets/fonts/Cinzel-VariableFont_wght.ttf");
+}
 
-    /* Kleuren */
-    .color-example {
-        background-color: #bada55;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #002646;
+    --color-secondary: #fff;
+    --color-accent: #d8b66a;
+
+    /* 30px */
+    --spacing-s: calc(var(--spacing-m) / 2); 
+    /* 15px */
+    --spacing-m: 1.875rem;
+
+    --animation-duration: 0.3s;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-primary);
+    padding-inline: var(--spacing-m);
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: Cinzel;
+
+    @media (width > 900px) {
+        font-size: 4rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--color-primary);
+
+    display: grid;
+    grid-template-columns: max-content min-content;
+    place-items: center;
+    gap: 0.5rem;
+
+    &.nav-link {
+
+       svg {
+            rotate: 90deg;
+            transition: all var(--animation-duration) ease;
+        }
+
+        &:hover {
+            svg {
+            rotate: -90deg;
+        }
+        }
     }
 
-    /* Typografie */
+    &.button {
+        width: max-content;
+        padding: 1rem;
+        border-radius: 100px;
+        border: 0;
+        gap: 1.5rem;
+        margin-block: var(--spacing-s);
 
+        transition: all var(--animation-duration) ease;
 
-    /* Formulier elementen */
+        &:hover {
+            scale: 1.05;
+        }
 
+        &.primary {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+
+            &:hover {
+                background-color: var(--color-accent);
+                color: var(--color-primary);
+
+                path {
+                    stroke: var(--color-primary);
+                }
+            }
+        }
+
+        &.secondary {
+            background-color: var(--color-secondary);
+            border: 1px solid var(--color-primary);
+
+            &:hover {
+                background-color: var(--color-primary);
+                color: var(--color-secondary);
+
+                path {
+                    stroke: var(--color-secondary)
+                }
+            }
+        }
+    }
+}
 }
