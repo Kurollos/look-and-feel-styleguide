@@ -30,6 +30,13 @@
 
         --animation-duration: 0.3s;
 
+        --font-size-xxl: 4rem;
+        --font-size-xl: 3rem;
+        --font-size-l: 2rem;
+        --font-size-m: 1.5rem;
+        --font-size-s: 1rem;
+
+        --font-weight-regular: 400;
     }
 
     body {
@@ -39,29 +46,29 @@
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: var(--font-size-xl);
         font-family: Cinzel;
 
         @media (width > 900px) {
-            font-size: 4rem;
+            font-size: var(--font-size-xxl);
         }
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: var(--font-size-l);
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: var(--font-weight-regular);
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: var(--font-size-m);
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: var(--font-weight-regular);
     }
 
     p {
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: var(--font-size-s);
+        font-weight: var(--font-weight-regular);
         line-height: 1.4;
     }
 
@@ -100,7 +107,7 @@
     }
 
     a {
-        font-size: 1rem;
+        font-size: var(--font-size-s);
         text-decoration: none;
         color: var(--color-primary);
 
