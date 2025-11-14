@@ -4,133 +4,166 @@
 
 @layer styleguide {
 
-@font-face {
-    font-family: "Cinzel";
-    src: url("../assets/fonts/Cinzel-VariableFont_wght.ttf");
-}
+    @font-face {
+        font-family: "Cinzel";
+        src: url("../assets/fonts/Cinzel-VariableFont_wght.ttf");
+    }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-:root {
-    --color-primary: #002646;
-    --color-secondary: #fff;
-    --color-accent: #d8b66a;
+    :root {
+        --color-primary: #002646;
+        --color-secondary: #fff;
+        --color-accent: #d8b66a;
 
-    /* 30px */
-    --spacing-s: calc(var(--spacing-m) / 2); 
-    /* 15px */
-    --spacing-m: 1.8rem;
+        /* 30px */
+        --spacing-s: calc(var(--spacing-m) / 2);
+        /* 15px */
+        --spacing-m: 1.8rem;
 
+
+        --animation-duration: 0.3s;
+
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--color-primary);
+        padding-inline: var(--spacing-m);
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-family: Cinzel;
+
+        @media (width > 900px) {
+            font-size: 4rem;
+        }
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    section {
+        margin-block: var(--spacing-m);
+
+        &.styleguide-section {
+         
+            &.flex-styleguide {
+                display: flex;
+                gap: 1rem;
+            }
     
-    --animation-duration: 0.3s;
-
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--color-primary);
-    padding-inline: var(--spacing-m);
-}
-
-h1 {
-    font-size: 3rem;
-    font-family: Cinzel;
-
-    @media (width > 900px) {
-        font-size: 4rem;
-    }
-}
-
-h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-h3 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-p {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.4;
-}
-
-
-a {
-    font-size: 1rem;
-    text-decoration: none;
-    color: var(--color-primary);
-
-    display: grid;
-    grid-template-columns: max-content min-content;
-    place-items: center;
-    gap: 0.5rem;
-
-    &.nav-link {
-
-       svg {
-            rotate: 90deg;
-            transition: all var(--animation-duration) ease;
+            .color-visual {
+                width: 150px;
+                aspect-ratio: 1/1;
+                display: grid;
+                place-content: center;
+                border-radius: 100%;
+    
+                &.primary-color {
+                    background-color: var(--color-primary);
+                    color: var(--color-secondary);
+                }
+    
+                &.secondary-color {
+                    background-color: var(--color-secondary);
+                    border: 1px solid var(--color-primary);
+                }
+    
+                &.accent-color {
+                    background-color: var(--color-accent);
+                }
+            }
         }
+    }
 
-        &:hover {
+    a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--color-primary);
+
+        display: grid;
+        grid-template-columns: max-content min-content;
+        place-items: center;
+        gap: 0.5rem;
+
+        &.nav-link {
+
             svg {
-            rotate: -90deg;
-        }
-        }
-    }
-
-    &.button {
-        width: max-content;
-        padding: 1rem;
-        border-radius: 100px;
-        border: 0;
-        gap: 1.5rem;
-        margin-block: var(--spacing-s);
-
-        transition: all var(--animation-duration) ease;
-
-        &:hover {
-            scale: 1.05;
-        }
-
-        &.primary {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
+                rotate: 90deg;
+                transition: all var(--animation-duration) ease;
+            }
 
             &:hover {
-                background-color: var(--color-accent);
-                color: var(--color-primary);
-
-                path {
-                    stroke: var(--color-primary);
+                svg {
+                    rotate: -90deg;
                 }
             }
         }
 
-        &.secondary {
-            background-color: var(--color-secondary);
-            border: 1px solid var(--color-primary);
+        &.button {
+            width: max-content;
+            padding: 1rem;
+            border-radius: 100px;
+            border: 0;
+            gap: 1.5rem;
+            margin-block: var(--spacing-s);
+
+            transition: all var(--animation-duration) ease;
 
             &:hover {
+                scale: 1.05;
+            }
+
+            &.primary {
                 background-color: var(--color-primary);
                 color: var(--color-secondary);
 
-                path {
-                    stroke: var(--color-secondary)
+                &:hover {
+                    background-color: var(--color-accent);
+                    color: var(--color-primary);
+
+                    path {
+                        stroke: var(--color-primary);
+                    }
+                }
+            }
+
+            &.secondary {
+                background-color: var(--color-secondary);
+                border: 1px solid var(--color-primary);
+
+                &:hover {
+                    background-color: var(--color-primary);
+                    color: var(--color-secondary);
+
+                    path {
+                        stroke: var(--color-secondary)
+                    }
                 }
             }
         }
     }
-}
 }
