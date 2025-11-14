@@ -22,9 +22,7 @@
         --color-secondary: #fff;
         --color-accent: #d8b66a;
 
-        /* 30px */
         --spacing-s: calc(var(--spacing-m) / 2);
-        /* 15px */
         --spacing-m: 1.8rem;
 
 
@@ -76,7 +74,7 @@
         margin-block: var(--spacing-m);
 
         &.styleguide-section {
-         
+
             &.flex-styleguide {
                 display: flex;
                 gap: 1rem;
