@@ -25,7 +25,7 @@
     /* 30px */
     --spacing-s: calc(var(--spacing-m) / 2); 
     /* 15px */
-    --spacing-m: 1.875rem;
+    --spacing-m: 1.8rem;
 
     
     --animation-duration: 0.3s;
