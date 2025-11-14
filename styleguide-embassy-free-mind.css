@@ -33,8 +33,6 @@
         --font-size-l: 2rem;
         --font-size-m: 1.5rem;
         --font-size-s: 1rem;
-
-        --font-weight-regular: 400;
     }
 
     body {
@@ -54,20 +52,26 @@
 
     h2 {
         font-size: var(--font-size-l);
-        text-transform: uppercase;
-        font-weight: var(--font-weight-regular);
     }
 
     h3 {
         font-size: var(--font-size-m);
-        text-transform: uppercase;
-        font-weight: var(--font-weight-regular);
     }
 
     p {
         font-size: var(--font-size-s);
-        font-weight: var(--font-weight-regular);
         line-height: 1.4;
+    }
+
+    h2,
+    h3,
+    p {
+        font-weight: 400;
+    }
+
+    h2,
+    h3 {
+        text-transform: uppercase;
     }
 
     section {
@@ -79,24 +83,24 @@
                 display: flex;
                 gap: 1rem;
             }
-    
+
             .color-visual {
                 width: 150px;
                 aspect-ratio: 1/1;
                 display: grid;
                 place-content: center;
                 border-radius: 100%;
-    
+
                 &.primary-color {
                     background-color: var(--color-primary);
                     color: var(--color-secondary);
                 }
-    
+
                 &.secondary-color {
                     background-color: var(--color-secondary);
                     border: 1px solid var(--color-primary);
                 }
-    
+
                 &.accent-color {
                     background-color: var(--color-accent);
                 }
