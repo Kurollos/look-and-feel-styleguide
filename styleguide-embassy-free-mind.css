@@ -45,7 +45,7 @@
 
     h1 {
         font-size: var(--font-size-xl);
-        font-family: Cinzel;
+        font-family: "Cinzel";
 
         @media (width > 900px) {
             font-size: var(--font-size-xxl);
