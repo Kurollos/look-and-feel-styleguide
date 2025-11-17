@@ -21,6 +21,8 @@
         --color-primary: #002646;
         --color-secondary: #fff;
         --color-accent: #d8b66a;
+        --color-inactive: #E9E9E9;
+        --color-inactive-dark: #6E6E6E;
 
         --spacing-s: calc(var(--spacing-m) / 2);
         --spacing-m: 1.8rem;
@@ -110,6 +112,15 @@
 
                 &.accent-color {
                     background-color: var(--color-accent);
+                }
+
+                &.inactive-color {
+                    background-color: var(--color-inactive);
+                }
+
+                &.inactive-color-dark {
+                    background-color: var(--color-inactive-dark);
+                    color: var(--color-secondary);
                 }
             }
         }
