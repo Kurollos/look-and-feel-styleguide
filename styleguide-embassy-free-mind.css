@@ -35,8 +35,6 @@
         --font-size-l: 2rem;
         --font-size-m: 1.5rem;
         --font-size-s: 1rem;
-
-        --breakpoint-desktop: 900px;
     }
 
     body {
