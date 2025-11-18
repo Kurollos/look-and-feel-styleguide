@@ -45,7 +45,7 @@
         padding-inline: var(--spacing-s);
 
         @media (width > 900px) {
-        padding-inline: var(--spacing-m);
+            padding-inline: var(--spacing-m);
         }
     }
 
@@ -136,6 +136,8 @@
         place-items: center;
         gap: 0.5rem;
 
+        width: max-content;
+
         &.nav-link {
 
             svg {
@@ -143,9 +145,29 @@
                 transition: all var(--animation-duration) ease;
             }
 
-            &:hover {
-                svg {
-                    rotate: -90deg;
+            @media (any-pointer: fine) {
+
+                &:hover {
+                    svg {
+                        rotate: -90deg;
+                    }
+                }
+            }
+        }
+
+        &.body-link {
+
+            svg {
+                transition: all var(--animation-duration) ease;
+            }
+
+            @media (any-pointer: fine) {
+
+                &:hover {
+
+                    svg {
+                        translate: 1rem 0;
+                    }
                 }
             }
         }
@@ -160,20 +182,25 @@
 
             transition: all var(--animation-duration) ease;
 
-            &:hover {
-                scale: 1.05;
+            @media (any-pointer: fine) {
+                &:hover {
+                    scale: 1.05;
+                }
             }
 
             &.primary {
                 background-color: var(--color-primary);
                 color: var(--color-secondary);
 
-                &:hover {
-                    background-color: var(--color-accent);
-                    color: var(--color-primary);
+                @media (any-pointer: fine) {
 
-                    path {
-                        stroke: var(--color-primary);
+                    &:hover {
+                        background-color: var(--color-accent);
+                        color: var(--color-primary);
+
+                        path {
+                            stroke: var(--color-primary);
+                        }
                     }
                 }
             }
@@ -182,14 +209,18 @@
                 background-color: var(--color-secondary);
                 border: 1px solid var(--color-primary);
 
-                &:hover {
-                    background-color: var(--color-primary);
-                    color: var(--color-secondary);
+                @media (any-pointer: fine) {
 
-                    path {
-                        stroke: var(--color-secondary)
+                    &:hover {
+                        background-color: var(--color-primary);
+                        color: var(--color-secondary);
+
+                        path {
+                            stroke: var(--color-secondary)
+                        }
                     }
                 }
+
             }
         }
     }
