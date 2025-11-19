@@ -236,4 +236,16 @@
             }
         }
     }
+    form{
+        label {
+            display: flex;
+            gap: 1rem;
+        input[type="text"], input[type="email"]{
+            outline: none;
+           border-inline:none;
+           border-top: none;
+            border-bottom: 1px solid var(--color-primary);
+        }
+        }
+    }
 }
