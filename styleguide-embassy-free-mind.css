@@ -139,6 +139,11 @@
         &.nav-link {
             color: var(--color-secondary);
 
+            &.dark-bg {
+                background-color: var(--color-primary);
+                padding: var(--spacing-s);
+            }
+
             svg {
                 rotate: 90deg;
 
@@ -147,8 +152,8 @@
                 }
 
                 path {
-                            stroke: var(--color-secondary);
-                        }
+                    stroke: var(--color-secondary);
+                }
             }
 
             @media (any-pointer: fine) {
@@ -236,16 +241,25 @@
             }
         }
     }
-    form{
+
+    form {
         label {
             display: flex;
             gap: 1rem;
-        input[type="text"], input[type="email"]{
-            outline: none;
-           border-inline:none;
-           border-top: none;
-            border-bottom: 1px solid var(--color-primary);
-        }
+            margin-block: var(--spacing-s);
+
+            input[type="text"],
+            input[type="email"] {
+                width: 100%;
+                outline: none;
+                border-inline: none;
+                border-top: none;
+                border-bottom: 1px solid var(--color-primary);
+
+                @media (width > 900px) {
+                    width: unset;
+                }
+            }
         }
     }
 }
