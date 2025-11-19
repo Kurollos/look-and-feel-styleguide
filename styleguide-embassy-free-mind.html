@@ -7,6 +7,7 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="styleguide.css"> -->
     <link rel="stylesheet" href="styleguide-embassy-free-mind.css">
+    <script type="module" src="scripts/script.js"></script>
 </head>
 
 <body>
@@ -48,9 +49,9 @@
     </section>
     <section>
         <form action="">
-            <button class="Aantal-Min">-</button>
-            <input type="number">
-            <button class="Aantal-Add">+</button>
+            <button class="aantal-min" type="button" commandfor="spin" command="--stepdown">-</button>
+            <input type="number" id="spin">
+            <button class="aantal-add" type="button" commandfor="spin" command="--step-up">+</button>
         </form>
     </section>
 </body>

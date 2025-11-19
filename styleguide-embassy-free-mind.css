@@ -243,39 +243,35 @@
     }
 
     form {
-        button.Aantal-Min {
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-            border: none;
-            background-color: var(--color-inactive);
-            font-size: var(--font-size-s);
+        button {
+
+            &.aantal-min,
+            &.aantal-add {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                border: none;
+                background-color: var(--color-primary);
+                font-size: var(--font-size-s);
+                cursor: pointer;
+                color: var(--color-secondary);
+            }
         }
 
-        button.Aantal-Add {
-            width: 50px;
-            height: 50px;
-            border-radius: 100%;
-            border: none;
-            background-color: var(--color-primary);
-            color: white;
-            cursor: pointer;
-            font-size: var(--font-size-s);
-        }
 
         input[type="number"] {
             height: 50px;
             width: 90px;
             text-align: center;
             border-radius: 50px;
-            cursor: pointer;
             border: var(--color-primary) 1px solid;
         }
 
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
+            -webkit: none;
             margin: 0;
+            display: none;
         }
 
         label {
