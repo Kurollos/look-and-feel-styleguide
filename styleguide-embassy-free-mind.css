@@ -137,6 +137,7 @@
         width: max-content;
 
         &.nav-link {
+            color: var(--color-secondary);
 
             svg {
                 rotate: 90deg;
@@ -144,6 +145,10 @@
                 @media (prefers-reduced-motion: no-preference) {
                     transition: all var(--animation-duration) ease;
                 }
+
+                path {
+                            stroke: var(--color-secondary);
+                        }
             }
 
             @media (any-pointer: fine) {
