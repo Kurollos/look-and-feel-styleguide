@@ -40,7 +40,10 @@
     body {
         font-family: Arial, Helvetica, sans-serif;
         color: var(--color-primary);
-        padding-inline: var(--spacing-s);
+        
+        main {
+            padding-inline: var(--spacing-s);
+        }
 
         @media (width > 900px) {
             main {
