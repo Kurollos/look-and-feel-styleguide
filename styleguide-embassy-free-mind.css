@@ -72,6 +72,10 @@
     p {
         font-size: var(--font-size-s);
         line-height: 1.4;
+
+        &.bold {
+            font-weight: bold;
+        }
     }
 
     h2,
