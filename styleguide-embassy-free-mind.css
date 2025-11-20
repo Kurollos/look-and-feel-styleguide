@@ -43,7 +43,9 @@
         padding-inline: var(--spacing-s);
 
         @media (width > 900px) {
-            padding-inline: var(--spacing-m);
+            main {
+                padding-inline: var(--spacing-m);
+            }
         }
     }
 
