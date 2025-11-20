@@ -40,21 +40,13 @@
     body {
         font-family: Arial, Helvetica, sans-serif;
         color: var(--color-primary);
-        
-        main {
-            padding-inline: var(--spacing-s);
-        }
-
-        @media (width > 900px) {
-            main {
-                padding-inline: var(--spacing-m);
-            }
-        }
     }
 
     h1 {
         font-size: var(--font-size-xl);
         font-family: "Cinzel";
+        line-height: 1;
+        letter-spacing: -6%;
 
         @media (width > 900px) {
             font-size: var(--font-size-xxl);
