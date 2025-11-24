@@ -169,6 +169,16 @@
 
         &.body-link {
 
+            &.light {
+                color: var(--color-secondary);
+
+                svg {
+                    path {
+                        stroke: var(--color-secondary);
+                    }
+                }
+            }
+
             svg {
                 @media (prefers-reduced-motion: no-preference) {
                     transition: all var(--animation-duration) ease;
